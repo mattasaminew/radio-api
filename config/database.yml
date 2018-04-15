@@ -1,4 +1,4 @@
-<% Dotenv.load if Rails.env == 'development' %>
+<% Dotenv.load %>
 # PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
