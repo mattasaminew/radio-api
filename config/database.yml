@@ -21,13 +21,13 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: <%= ENV['AIRTIME_HOST'] %>
   database: <%= ENV['AIRTIME_DB_NAME'] %>
   username: <%= ENV['AIRTIME_DB_USER'] %>
   password: <%= ENV['AIRTIME_DB_PASS'] %>
 
 development:
   <<: *default
+  host: <%= ENV['AIRTIME_HOST'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,3 +81,4 @@ development:
 #
 production:
   <<: *default
+  host: localhost
