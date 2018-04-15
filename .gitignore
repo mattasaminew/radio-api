@@ -15,6 +15,7 @@
 
 # Ignore environment variables
 .env
+.rbenv-vars
 
 # Ignore uploaded files in development
 /storage/*
