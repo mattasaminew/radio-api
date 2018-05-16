@@ -11,4 +11,9 @@ class ShowsController < ApplicationController
 		show = Show.find(params[:id])
 		render json: ShowFile.select_from_show_name(show.name)
 	end
+
+	def show_episode
+		show = ShowFile.find(params[:id])
+		send_file show.file_path, type: 'audio/mpeg', disposition: 'inline'
+	end
 end

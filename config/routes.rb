@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 	root 'shows#home'
 	get '/shows', to: 'shows#index'
 	get '/shows/:id', to: 'shows#show'
+	get '/episode/:id', to: 'shows#show_episode'
 end
