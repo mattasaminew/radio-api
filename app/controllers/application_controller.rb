@@ -15,6 +15,6 @@ class ApplicationController < ActionController::API
 	end
 
 	def allowed_origins
-		['http://localhost:4000']
+		['http://localhost:4000', 'http://backsp.in', 'https://backsp.in']
 	end
 end
