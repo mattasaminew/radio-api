@@ -1,8 +1,4 @@
 class ShowsController < ApplicationController
-	def home
-		render plain: "Backspin API"
-	end
-
 	def index
 		render json: Show.deduped_shows
 	end
