@@ -1,6 +1,6 @@
 class ShowsController < ApplicationController
 	def home
-		render plain: "Airtime Rails API"
+		render plain: "Backspin API"
 	end
 
 	def index
