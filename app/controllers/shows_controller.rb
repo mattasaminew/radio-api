@@ -5,7 +5,8 @@ class ShowsController < ApplicationController
 
 	def show
 		show = Show.find(params[:id])
-		render json: ShowFile.select_from_show_name(show.name)
+		episodes = ShowFile.select_from_show_name(show.name)
+		render json: { show: show, episodes: episodes }
 	end
 
 	def show_episode
