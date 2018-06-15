@@ -4,7 +4,7 @@ class Show < ApplicationRecord
 	def self.deduped_shows
 		find_by_sql(arel_table.project(arel_table[Arel.star])
 													.distinct_on(arel_table[:name])
-													.order(arel_table[:name], arel_table[:id].desc))
+													.order(arel_table[:name], arel_table[:description].desc, arel_table[:id].desc))
 	end
 
 	def self.slug_show_names
